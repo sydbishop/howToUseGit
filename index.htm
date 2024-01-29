@@ -12,7 +12,7 @@
     }
 
     .pageContent{
-      margin-top: 80px;
+      margin-top: 4em;
       margin-left: 8px;
     }
 
@@ -23,6 +23,21 @@
     h5{
       font-size: 22px;
       color: #7d8590;
+    }
+
+    .section{
+      padding-bottom: .3em;
+      margin-bottom: 5%;
+    }
+
+    .sectionTitle{
+      padding-bottom: .3em;
+      border-bottom: 1px solid #21262d;
+      margin-bottom: 1em;
+    }
+
+    .subSection{
+      padding-bottom: .3em;
     }
 
   </style>
@@ -178,113 +193,135 @@
     
       <div class="col-8">
         <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-          <div id="item-1">
-            <h4>Setting Up the Environment</h4>
+          <div class="section">
+            <div class="sectionTitle" id="item-1">
+              <h4>Setting Up the Environment</h4>
+            </div>
+            <div class="subSection" id="item-1-1">
+              <h5>Install Git and VS Code</h5>
+              <p>Before you can start using GitHub with VS Code, make sure you have Git and Visual Studio Code installed on your system.</p>
+              <ul>
+                <li>Git: Download and install Git from <a href="https://git-scm.com/" class="link-primary" target="_blank">here</a>.</li>
+                <li>VS Code: Download and install Visual Studio Code from <a href="https://code.visualstudio.com/" class="link-primary" target="_blank">here</a>.</li>
+              </ul>
+            </div>
+            <div class="subSection" id="item-1-2">
+              <h5>Configure Git within VS Code</h5>
+              <p>Configure your Git account with your GitHub. To do this, open Command Prompt and type:</p>
+              <div class="card text-bg-dark mb-3" style="max-width: 32rem;">
+                <div class="card-body">
+                  <p>git config --global user.name “YourUserNameOnGithub”</p>
+                  <p>git config --global user.email “YourEmail”</p>
+                </div>
+              </div>
+              <p>Here, replace YourUserNameOnGithub with your GitHub-username, and YourEmail with the email-id used while creating an account on GitHub.</p>
+              <p>This process ensures that your Git commits will be associated with the correct user.</p>
+            </div>
           </div>
-          <div id="item-1-1">
-            <h5>Install Git and VS Code</h5>
-            <p>Before you can start using GitHub with VS Code, make sure you have Git and Visual Studio Code installed on your system.</p>
-            <ul>
-              <li>Git: Download and install Git from https://git-scm.com/.</li>
-              <li>VS Code: Download and install Visual Studio Code from https://code.visualstudio.com/.</li>
-            </ul>
+
+          <div class="section">
+            <div class="sectionTitle" id="item-2">
+              <h4>Creating and Cloning a GitHub Repository</h4>
+            </div>
+              <div class="subSection" id="item-2-1">
+                <h5>Create a New Repository on GitHub</h5>
+                <ol>
+                  <li>Go to GitHub and log in to your account.</li>
+                  <li>Click on the '+' icon in the top right corner and select "New repository."</li>
+                  <li>Fill in the repository details, add a README if needed, and click "Create repository."</li>
+                </ol>
+              </div>
+              <div class="subSection" id="item-2-2">
+                <h5>Clone the Repository using VS Code</h5>
+                <ol>
+                  <li>Copy the repository URL from GitHub.</li>
+                  <li>In VS Code, open the command palette (Ctrl+Shift+P), type "Git: Clone," and paste the repository URL.</li>
+                  <li>Choose a local folder, and VS Code will clone the repository for you.</li>
+                </ol>
+              </div>
           </div>
-          <div id="item-1-2">
-            <h5>Configure Git within VS Code</h5>
-            <p>Configure your Git account with your GitHub. To do this Open Command Prompt and Type:</p>
-            <p>git config --global user.name “YourUserNameOnGithub”</p>
-            <p>git config --global user.email “YourEmail”</p>
-            <p>Here, replace YourUserNameOnGithub with your GitHub-username, and YourEmail with the email-id used while creating an account on GitHub.</p>
-            <p>This process ensures that your Git commits will be associated with the correct user.</p>
+
+          <div class="section">
+            <div class="sectionTitle" id="item-3">
+              <h4>Basic Git Operations in VS Code</h4>
+            </div>
+            <div class="subSection" id="item-3-1">
+              <h5>Status</h5>
+              <p>Use the Source Control view in VS Code to check the status of your changes.</p>
+            </div>
+            <div class="subSection" id="item-3-2">
+              <h5>Add</h5>
+              <p>Stage changes by clicking the "+" button next to the files you want to include.</p>
+            </div>
+            <div class="subSection" id="item-3-3">
+              <h5>Commit</h5>
+              <p>Enter a commit message and click the checkmark to commit your changes.</p>
+            </div>
+            <div class="subSection" id="item-3-4">
+              <h5>Push/Pull</h5>
+              <p>Use the sync icon in the bottom-right corner to push or pull changes.</p>
+            </div>
           </div>
-          <div id="item-2">
-            <h4>Creating and Cloning a GitHub Repository</h4>
+
+          <div class="section">
+            <div class="sectionTitle" id="item-4">
+              <h4>Branching with VS Code</h4>
+            </div>
+            <div class="subSection" id="item-4-1">
+              <h5>Create and Switch Between Branches</h5>
+              <ol>
+                <li>Open the Source Control view, click on the branch name at the bottom, and select "Create Branch."</li>
+                <li>Enter a branch name and press Enter.</li>
+                <li>To switch branches, click on the branch name and select the desired branch.</li>
+              </ol>
+            </div>
+            <div class="subSection" id="item-4-2">
+              <h5>Understand the Concept of Branching</h5>
+              <p>Branching allows you to work on features or bug fixes in isolation without affecting the main codebase. It enables parallel development and easy collaboration.</p>
+            </div>
           </div>
-          <div id="item-2-1">
-            <h5>Create a New Repository on GitHub</h5>
-            <ol>
-              <li>Go to GitHub and log in to your account.</li>
-              <li>Click on the '+' icon in the top right corner and select "New repository."</li>
-              <li>Fill in the repository details, add a README if needed, and click "Create repository."</li>
-            </ol>
+
+          <div class="section">
+            <div class="sectionTitle" id="item-5">
+              <h4>Working with Remote Repositories</h4>
+            </div>
+            <div class="subSection" id="item-5-1">
+              <h5>Add and Manage Remote Repositories</h5>
+              <ol>
+                <li>Open the Source Control view, click on the three dots, and select "Remote."</li>
+                <li>Click on the '+' icon to add a remote repository.</li>
+              </ol>
+            </div>
+            <div class="subSection" id="item-5-2">
+              <h5>Push to and Pull from Remotes</h5>
+              <ul>
+                <li>Use the sync icon to push changes to the remote repository.</li>
+                <li>To pull changes, click on the sync icon and choose "Pull from..."</li>
+              </ul>
+            </div>
           </div>
-          <div id="item-2-2">
-            <h5>Clone the Repository using VS Code</h5>
-            <ol>
-              <li>Copy the repository URL from GitHub.</li>
-              <li>In VS Code, open the command palette (Ctrl+Shift+P), type "Git: Clone," and paste the repository URL.</li>
-              <li>Choose a local folder, and VS Code will clone the repository for you.</li>
-            </ol>
+
+          <div class="section">
+            <div class="sectionTitle" id="item-6">
+              <h4>Pull Requests and Code Reviews within VS Code</h4>
+            </div>
+            <div class="subSection" id="item-6-1">
+              <h5>Create Pull Requests</h5>
+              <ol>
+                <li>On GitHub, navigate to your repository and click on the "Pull requests" tab.</li>
+                <li>Click "New pull request," select the base and compare branches, and click "Create pull request."</li>
+              </ol>
+            </div>
+            <div class="subSection" id="item-6-2">
+              <h5>Review and Discuss Pull Requests</h5>
+              <ol>
+                <li>In VS Code, open the "Pull Requests" view.</li>
+                <li>Select the pull request you want to review.</li>
+                <li>Comment on the changes and discuss with your collaborators.</li>
+              </ol>
+            </div>
           </div>
-          <div id="item-3">
-            <h4>Basic Git Operations in VS Code</h4>
-          </div>
-          <div id="item-3-1">
-            <h5>Status</h5>
-            <p>Use the Source Control view in VS Code to check the status of your changes.</p>
-          </div>
-          <div id="item-3-2">
-            <h5>Add</h5>
-            <p>Stage changes by clicking the "+" button next to the files you want to include.</p>
-          </div>
-          <div id="item-3-3">
-            <h5>Commit</h5>
-            <p>Enter a commit message and click the checkmark to commit your changes.</p>
-          </div>
-          <div id="item-3-4">
-            <h5>Push/Pull</h5>
-            <p>Use the sync icon in the bottom-right corner to push or pull changes.</p>
-          </div>
-          <div id="item-4">
-            <h4>Branching with VS Code</h4>
-          </div>
-          <div id="item-4-1">
-            <h5>Create and Switch Between Branches</h5>
-            <ol>
-              <li>Open the Source Control view, click on the branch name at the bottom, and select "Create Branch."</li>
-              <li>Enter a branch name and press Enter.</li>
-              <li>To switch branches, click on the branch name and select the desired branch.</li>
-            </ol>
-          </div>
-          <div id="item-4-2">
-            <h5>Understand the Concept of Branching</h5>
-            <p>Branching allows you to work on features or bug fixes in isolation without affecting the main codebase. It enables parallel development and easy collaboration.</p>
-          </div>
-          <div id="item-5">
-            <h4>Working with Remote Repositories</h4>
-          </div>
-          <div id="item-5-1">
-            <h5>Add and Manage Remote Repositories</h5>
-            <ol>
-              <li>Open the Source Control view, click on the three dots, and select "Remote."</li>
-              <li>Click on the '+' icon to add a remote repository.</li>
-            </ol>
-          </div>
-          <div id="item-5-2">
-            <h5>Push to and Pull from Remotes</h5>
-            <ul>
-              <li>Use the sync icon to push changes to the remote repository.</li>
-              <li>To pull changes, click on the sync icon and choose "Pull from..."</li>
-            </ul>
-          </div>
-          <div id="item-6">
-            <h4>Pull Requests and Code Reviews within VS Code</h4>
-          </div>
-          <div id="item-6-1">
-            <h5>Create Pull Requests</h5>
-            <ol>
-              <li>On GitHub, navigate to your repository and click on the "Pull requests" tab.</li>
-              <li>Click "New pull request," select the base and compare branches, and click "Create pull request."</li>
-            </ol>
-          </div>
-          <div id="item-6-2">
-            <h5>Review and Discuss Pull Requests</h5>
-            <ol>
-              <li>In VS Code, open the "Pull Requests" view.</li>
-              <li>Select the pull request you want to review.</li>
-              <li>Comment on the changes and discuss with your collaborators.</li>
-            </ol>
-          </div>
+
         </div>
       </div>
     </div>
